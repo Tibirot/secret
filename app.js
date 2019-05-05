@@ -45,7 +45,7 @@ userSchema.plugin(findOrCreate);
 
 const User = new mongoose.model("User", userSchema);
 
-// passport.use(User.createStrategy());
+passport.use(User.createStrategy());
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
